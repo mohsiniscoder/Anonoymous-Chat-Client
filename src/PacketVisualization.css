@@ -1,0 +1,62 @@
+/* PacketVisualization.css */
+
+.packet-visualization {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #333;
+}
+
+.osi-layers {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.osi-layer {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e7f3ff;
+    transition: background-color 0.3s;
+}
+
+.osi-layer.active {
+    background-color: #4A90E2;
+    color: white;
+}
+
+.packet {
+    position: relative;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.packet-animation {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    animation: movePacket 1s ease-in-out forwards;
+}
+
+@keyframes movePacket {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    100% {
+        left: calc(100% - 100px); /* Move to the right */
+        top: 0;
+    }
+}
